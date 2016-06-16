@@ -1,0 +1,9 @@
+<h1> Inventory </h1>
+<div class="property-wrapper">
+  <div class="property">
+    <% @property.each do |property| %>
+      <div class ="image "><%= image_tag property.image.url(:medium) %></div>
+        <%= property.caption %>
+    <% end %>
+  </div>
+</div>
