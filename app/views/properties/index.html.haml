@@ -1,0 +1,6 @@
+%h1 Inventory
+.property-wrapper
+  .property
+    - @property.each do |property|
+      .image= image_tag property.image.url(:medium)
+      = property.caption

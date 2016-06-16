@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Housing
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %nav.navbar.navbar-default
+      .container-fluid
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %a.navbar-brand= link_to "Brand", root_path
+        #bs-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li= link_to "New Post", new_property_path
+  %body
+    = yield
